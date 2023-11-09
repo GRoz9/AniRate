@@ -1,0 +1,133 @@
+#ExtraFilter {
+    display: none;
+    grid-gap: 0; 
+    grid-template-columns: none;
+    justify-content: center;;
+}
+
+.Maintenance {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, 
+    rgba(0, 0, 0, 0.07) 0px 2px 2px, 
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, 
+    rgba(0, 0, 0, 0.07) 0px 8px 8px, 
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    padding: 0.5rem;
+    width: 100%;
+}
+@media screen {
+    #MainSearch {
+        width: 100%;
+      }
+    
+    #MainSearch .filterName{
+    display: none;
+    }
+
+    .NarrowSearch {
+    display: none;
+    }
+}
+
+/* @media screen and (min-width: 1441px) {
+  4K
+} */
+
+/* @media screen and (min-width: 1025px) and (max-width: 1440px){
+  Laptop L
+} */
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Laptop */
+  .container {
+      padding-left: 100px;
+      padding-right: 100px;
+  }
+
+  /* Desc */
+  .bannerImg {
+    margin-top: -3.5rem;
+  }
+  /* Desc */
+  
+}
+  
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    /* Tablet */
+    .cover:hover .image{
+      backdrop-filter: blur(0px);
+      filter: blur(0px);
+    }
+}
+  
+@media screen and (max-width: 500px) {
+/* Smartphones */
+
+  .Catagories {
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 15px 20px;
+  }
+
+  .cover {
+    height: 14rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  /* Desc */
+
+  .mainInfo {
+    margin-top: 1rem;
+  }
+
+  .sidePanel {
+    display: none;
+  }
+  /* Desc */
+
+}
+
+  /* Change on the Filter & Search bar past this point */
+  @media screen and (max-width: 991px) {  
+  .container{
+    padding: 10px;
+  }
+
+  #MainSearch {
+    width: 100%;
+  }
+
+  #MainSearch .filterName{
+    display: none;
+  }
+
+  .NarrowSearch {
+    display: none;
+  }
+
+  /* .ExtraFilterNS {
+    display: block;
+  } */
+
+}
+  
+  /* Affect at Tablet and Lower size */
+  @media screen and (max-width: 768px) {
+  .filterContainer {
+    justify-content: space-between;
+  }
+
+  .overview {
+    display: none;
+  }
+
+  .cover:hover .image{
+    backdrop-filter: blur(0px);
+    filter: blur(0px);
+  }
+
+  
+}

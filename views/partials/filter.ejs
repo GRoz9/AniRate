@@ -1,0 +1,142 @@
+        <!-- Filter -->
+
+        <div class="container">
+          <div class="switch">
+            <div class="switchSelect">
+              Browse
+              <div class="optionContainer">
+                <span class="activeOption" onclick="OptionDropDown()"> <%= MediaTypePref %> <i class="fa-solid fa-angle-down"></i> </span>
+                <ul id="optionList">
+                  <li onclick="OptionSwitch()" class="<%= MediaTypePref === 'Anime' ? 'active' : '' %>" >Anime</li>
+                  <li onclick="OptionSwitch()" class="<%= MediaTypePref === 'Manga' ? 'active' : '' %>" >Manga</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterContainer container">
+
+            <div class="filterBox" id="MainSearch">
+              <div class="filterName">Search</div>
+              <div class="filterSelect">
+                <div class="select">
+                  <form action="/search" method="POST" autocomplete="off" >
+                    <input type="text" placeholder="Search" name="search" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'" class="filterSearch"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filterBox NarrowSearch">
+              <div class="filterName">Genres</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filterBox NarrowSearch">
+              <div class="filterName">Type</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filterBox NarrowSearch">
+              <div class="filterName">Rated</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filterBox NarrowSearch">
+              <div class="filterName">Season</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filterBox NarrowSearch">
+              <div class="filterName">Status</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filterBox">
+              <div class="filterExtra">
+                  <button onclick="ExtraFilterFun()"><i class="fa-solid fa-sliders filterExtraIcon"></i></button>
+              </div>
+            </div>
+          </div>
+          <!-- Filter -->
+  
+          <!-- ExtraFilter -->
+          <div class="filterContainer container" id="ExtraFilter">
+            <p class="Maintenance">This is under-development currently</p>
+            <div class="filterBox ExtraFilterNS">
+              <div class="filterName">Genres</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+            
+            <div class="filterBox ExtraFilterNS">
+              <div class="filterName">Type</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filterBox ExtraFilterNS">
+              <div class="filterName">Rated</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filterBox ExtraFilterNS">
+              <div class="filterName">Season</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filterBox ExtraFilterNS">
+              <div class="filterName">Status</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div>
+            <!-- Optional Filter -->
+            <!-- <div class="filterBox">
+              <div class="filterName">Country Of Origin</div>
+              <div class="filterSelect">
+                <div class="select">
+                    <input type="text" placeholder="Any" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Any'" class="filterSearch"/>
+                </div>
+              </div>
+            </div> -->
+            <!-- Optional Filter -->
+          </div>
+          <!-- ExtraFilter -->

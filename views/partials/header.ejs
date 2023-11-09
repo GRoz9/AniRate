@@ -1,0 +1,34 @@
+    <!-- Nav Bar -->
+    <div class="container-fluid px-0">
+        <nav class="navbar navbar-expand-lg navbar-dark Nav-Bar">
+          <a class="navbar-brand Hover Logo" href="/">
+            <!-- <img src="../../public/images/AR.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
+            AniRate
+          </a>
+          <div class="collapse navbar-collapse menu" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="/">Search</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="/ANIME/Trending">Trending</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/ANIME/This-Season">Popular This Season</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/ANIME/Upcoming">Upcoming</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/ANIME/Popular">All Time Popular</a>
+              </li>
+            </ul>
+            <div id="TitlePref">
+              <span onclick="TitleSwitch('english')" id="english" class="Option <%= Lang === 'english' ? 'toggled' : '' %>">EN</span>
+              <span onclick="TitleSwitch('romaji')" id="romaji" class="Option <%= Lang === 'romaji' ? 'toggled' : '' %>">JP</span>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <script src="/js/OnClick.js"></script>
+      <!-- Nav Bar -->

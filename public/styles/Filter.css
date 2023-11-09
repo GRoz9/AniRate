@@ -1,0 +1,171 @@
+.filterContainer {
+  display: flex;
+  grid-gap: 24px;
+  align-items: flex-end;
+}
+  
+/* AniManga Start */
+
+.switch {
+  align-items: flex-end;
+  color: #1f2847;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.75rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.switchSelect {
+  align-items: baseline;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.optionContainer {
+  margin-left: 1rem;
+}
+
+.activeOption {
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 
+  rgb(204, 219, 232) 3px 3px 6px 0px inset,
+  rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  cursor: pointer;
+  display: flex;
+  padding: 0.5rem;
+  transition: all 0.3s;
+}
+
+#optionList {
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 
+  rgba(0, 0, 0, 0.07) 0px 1px 1px, 
+  rgba(0, 0, 0, 0.07) 0px 2px 2px, 
+  rgba(0, 0, 0, 0.07) 0px 4px 4px, 
+  rgba(0, 0, 0, 0.07) 0px 8px 8px, 
+  rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border-radius: 5px;
+  display: none;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.active {
+  display: none;
+}
+
+/* AniManga End */
+
+.switchSelect ul li {
+  cursor: pointer;
+}
+
+.filterName {
+  font-weight: 600;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+
+.filterSelect {
+  position: relative;
+  width: 100%;
+  font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+.select {
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 
+  rgba(17, 17, 26, 0.1) 0px 8px 24px, 
+  rgba(17, 17, 26, 0.1) 0px 16px 56px, 
+  rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  cursor: pointer;
+  display: grid;
+  font-size: 1.3rem;
+  grid-template-columns: auto 20px;
+  letter-spacing: .03rem;
+  padding: 8px 16px;
+}
+  
+.select form {
+  display: contents;
+}
+
+.placeholderAny{
+  position: absolute;
+}
+
+.filterSearch{
+  background: 0 0;
+  border: none;
+  display: inline-block;
+  font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+  
+.NoResults {
+  color: #1f2847;
+  display: flex;
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  justify-content: space-around
+}
+
+.filterExtra{
+  color: #278986;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: 
+  rgba(17, 17, 26, 0.1) 0px 8px 24px, 
+  rgba(17, 17, 26, 0.1) 0px 16px 56px, 
+  rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 600;
+  grid-template-columns: auto 20px;
+  letter-spacing: .03rem;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  padding: 8px;
+}
+
+.filterExtra:hover{
+  color: #24aca7;
+}
+
+.filterExtra button {
+  padding: 5px 10px;
+}
+
+#ExtraFilter {
+  display: none;
+  grid-gap: 28px 30px;
+  grid-template-columns: repeat(auto-fill,185px);
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+}
+
+.ExtraFilterNS {
+  display: none;
+}
+
+#ExtraFilterContainer {
+  border-radius: 5px;
+  box-shadow: 
+  rgba(17, 17, 26, 0.1) 0px 8px 24px, 
+  rgba(17, 17, 26, 0.1) 0px 16px 56px, 
+  rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  width: 100%;
+}

@@ -1,0 +1,7 @@
+<div class="mainTextBox shadow">
+    <% if (Respone.Media.trailer.site != null) { %>
+        <iframe width="100%" height="315" src="https://www.<%=Respone.Media.trailer.site%>.com/embed/<%=Respone.Media.trailer.id%>" frameborder="0" allowfullscreen></iframe>
+    <% } else { %>
+        Currently there are no trailers for this title
+    <% } %>
+</div>

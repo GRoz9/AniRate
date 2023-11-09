@@ -1,0 +1,153 @@
+<div class="container">
+        
+    <!-- Trending -->
+    <div class="categoryTitle" id="Trending">
+    <a href="<%= Respone.trending.media[0].type%>/Trending" class="Hover">Trending</a>
+    <a href="<%= Respone.trending.media[0].type%>/Trending" class="Hover">View More</a>
+    </div>
+
+    <section class="Catagories">
+    <% for (let i = 0; i < 6; i++) { %>
+        <div class="box">
+            <a href="/<%= Respone.trending.media[i].type%>/<%= Respone.trending.media[i].id %>/<%= encodeURI(Respone.trending.media[i].title[Lang]) %>" class="cover"> 
+            <img src=<%= Respone.trending.media[i].coverImage.extraLarge %> alt="" class="image loaded" />
+            <div class="overview">
+                <div class="overviewAvg">Average Score: <%= Respone.trending.media[i].averageScore %>%</div>
+                <div class="overviewDescription"><%= cleanDesc(Respone.trending.media[i].description, 118) %> </div>
+                <div class="ExtraInfo">
+                    <p>Start Date: <%= cleanDate(Respone.trending.media[i].startDate.month, Respone.trending.media[i].startDate.day, Respone.trending.media[i].startDate.year) %></p>
+                    <p>Status: <%= capitalise(Respone.trending.media[i].status) %> </p>
+                    <p>Season: <%= capitalise(Respone.trending.media[i].season + " " + Respone.trending.media[i].seasonYear) %></p>
+                </div>
+                <div class="Info">
+                    <span><%= Respone.trending.media[i].format %> Show</span>
+                    <span class="Seperator">•</span>
+                    <span><%= Respone.trending.media[i].episodes %> Episodes</span>
+                </div>
+                <div class="Tags">
+                    <!-- for (let j = 0; j < Math.min(((Respone.trending.media[i].genres).length), 3); j++) -->
+                    <% for (let j = 0; j < Math.min(((Respone.trending.media[i].genres).length), 3); j++) { %>
+                        <div class="TagBox"><%= Respone.trending.media[i].genres[j] %></div>
+                    <% } %>
+                </div>
+            </div>
+            </a>
+            <a href="/<%= Respone.trending.media[i].type%>/<%= Respone.trending.media[i].id %>/<%= encodeURI(Respone.trending.media[i].title[Lang]) %>" class="title"><%= Respone.trending.media[i].title[Lang] %></a>
+        </div>
+    <% } %>
+    </section>
+    <!-- Trending -->
+
+    <!-- Popular This Season-->
+    <div class="categoryTitle" id="PopularThisSeason">
+    <a href="<%= Respone.season.media[1].type%>/This-Season" class="Hover">Popular This Season</a>
+    <a href="<%= Respone.season.media[1].type%>/This-Season" class="Hover">View More</a>
+    </div>
+    
+    <section class="Catagories">
+    <% for (let i = 0; i < 6; i++) { %>
+        <div class="box">
+            <a href="/<%= Respone.season.media[i].type%>/<%= Respone.season.media[i].id %>/<%= encodeURI(Respone.season.media[i].title[Lang]) %>" class="cover">
+            <img src=<%= Respone.season.media[i].coverImage.extraLarge %> alt="" class="image loaded" />
+            <div class="overview">
+                <div class="overviewAvg">Average Score: <%= Respone.season.media[i].averageScore %>%</div>
+                <div class="overviewDescription"><%= cleanDesc(Respone.season.media[i].description, 118) %> </div>
+                <div class="ExtraInfo">
+                    <p>Start Date: <%= cleanDate(Respone.season.media[i].startDate.month, Respone.season.media[i].startDate.day, Respone.season.media[i].startDate.year) %></p>
+                    <p>Status: <%= capitalise(Respone.season.media[i].status) %> </p>
+                    <p>Season: <%= capitalise(Respone.season.media[i].season + " " + Respone.season.media[i].seasonYear) %></p>
+                </div>
+                <div class="Info">
+                    <span><%= Respone.season.media[i].format %> Show</span>
+                    <span class="Seperator">•</span>
+                    <span><%= Respone.season.media[i].episodes %> Episodes</span>
+                </div>
+                <div class="Tags">
+                    <% for (let j = 0; j < Math.min(((Respone.season.media[i].genres).length), 3); j++) { %>
+                        <div class="TagBox"><%= Respone.season.media[i].genres[j] %></div>
+                    <% } %>
+                </div>
+            </div>
+            </a>
+            <a href="/<%= Respone.season.media[i].type%>/<%= Respone.season.media[i].id %>/<%= encodeURI(Respone.season.media[i].title[Lang]) %>" class="title"><%= Respone.season.media[i].title[Lang] %></a>
+        </div>
+    <% } %>
+    </section>
+    
+    <!-- Popular This Season-->
+
+    <!-- Up Coming -->
+    <div class="categoryTitle" id="Upcoming">
+    <a href="<%= Respone.nextSeason.media[2].type%>/Upcoming" class="Hover">UpComing</a>
+    <a href="<%= Respone.nextSeason.media[2].type%>/Upcoming" class="Hover">View More</a>
+    </div>
+
+    <section class="Catagories">
+    <% for (let i = 0; i < 6; i++) { %>
+        <div class="box">
+            <a href="/<%= Respone.nextSeason.media[i].type%>/<%= Respone.nextSeason.media[i].id %>/<%= encodeURI(Respone.nextSeason.media[i].title[Lang]) %>" class="cover">
+            <img src=<%= Respone.nextSeason.media[i].coverImage.extraLarge %> alt="" class="image loaded" />
+            <div class="overview">
+                <div class="overviewAvg">Average Score: <%= Respone.nextSeason.media[i].averageScore %>%</div>
+                <div class="overviewDescription"><%= cleanDesc(Respone.nextSeason.media[i].description, 118) %> </div>
+                <div class="ExtraInfo">
+                    <p>Start Date: <%= cleanDate(Respone.nextSeason.media[i].startDate.month, Respone.nextSeason.media[i].startDate.day, Respone.nextSeason.media[i].startDate.year) %></p>
+                    <p>Status: <%= capitalise(Respone.nextSeason.media[i].status) %> </p>
+                    <p>Season: <%= capitalise(Respone.nextSeason.media[i].nextSeason + " " + Respone.nextSeason.media[i].nextSeasonYear) %></p>
+                </div>
+                <div class="Info">
+                    <span><%= Respone.nextSeason.media[i].format %> Show</span>
+                    <span class="Seperator">•</span>
+                    <span><%= Respone.nextSeason.media[i].episodes %> Episodes</span>
+                </div>
+                <div class="Tags">
+                    <% for (let j = 0; j < Math.min(((Respone.nextSeason.media[i].genres).length), 3); j++) { %>
+                        <div class="TagBox"><%= Respone.nextSeason.media[i].genres[j] %></div>
+                    <% } %>
+                </div>
+            </div>
+            </a>
+            <a href="/<%= Respone.nextSeason.media[i].type%>/<%= Respone.nextSeason.media[i].id %>/<%= encodeURI(Respone.nextSeason.media[i].title[Lang]) %>" class="title"><%= Respone.nextSeason.media[i].title[Lang] %></a>
+        </div>
+    <% } %>
+    </section>
+    <!-- Up Coming -->
+
+    <!-- All Time Popular -->
+    <div class="categoryTitle" id="AllTimePopular">
+    <a href="<%= Respone.popular.media[3].type%>/Popular" class="Hover">All Time Popular</a>
+    <a href="<%= Respone.popular.media[3].type%>/Popular" class="Hover">View More</a>
+    </div>
+
+    <section class="Catagories">
+
+    <% for (let i = 0; i < 6; i++) { %>
+        <div class="box">
+            <a href="/<%= Respone.popular.media[i].type%>/<%= Respone.popular.media[i].id %>/<%= encodeURI(Respone.popular.media[i].title[Lang]) %>" class="cover">
+            <img src=<%= Respone.popular.media[i].coverImage.extraLarge %> alt="" class="image loaded" />
+            <div class="overview">
+                <div class="overviewAvg">Average Score: <%= Respone.popular.media[i].averageScore %>%</div>
+                <div class="overviewDescription"><%= cleanDesc(Respone.popular.media[i].description, 118) %> </div>
+                <div class="ExtraInfo">
+                    <p>Start Date: <%= cleanDate(Respone.popular.media[i].startDate.month, Respone.popular.media[i].startDate.day, Respone.popular.media[i].startDate.year) %></p>
+                    <p>Status: <%= capitalise(Respone.popular.media[i].status) %> </p>
+                    <p>Season: <%= capitalise(Respone.popular.media[i].popular + " " + Respone.popular.media[i].popularYear) %></p>
+                </div>
+                <div class="Info">
+                    <span><%= Respone.popular.media[i].format %> Show</span>
+                    <span class="Seperator">•</span>
+                    <span><%= Respone.popular.media[i].episodes %> Episodes</span>
+                </div>
+                <div class="Tags">
+                    <% for (let j = 0; j < Math.min(((Respone.popular.media[i].genres).length), 3); j++) { %>
+                        <div class="TagBox"><%= Respone.popular.media[i].genres[j] %></div>
+                    <% } %>
+                </div>
+            </div>
+            </a>
+            <a href="/<%= Respone.popular.media[i].type%>/<%= Respone.popular.media[i].id %>/<%= encodeURI(Respone.popular.media[i].title[Lang]) %>" class="title"><%= Respone.popular.media[i].title[Lang] %></a>
+        </div>
+    <% } %>
+    </section>
+    <!-- All Time Popular -->
+</div>

@@ -1,0 +1,36 @@
+.footer {
+  background-color: #1f2847;
+  color: #def2f0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+}
+
+.footer ul {
+  list-style: none;
+  display: contents;
+}
+
+.footer li a {
+  color: #fff;
+  padding: 12px 17px;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.footer li a:hover {
+  background-color: #def2f0;
+  color: #000;
+}
+
+.Branding {
+  display: block;
+  margin: 0;
+}

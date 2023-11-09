@@ -1,0 +1,75 @@
+<div class="mainTextBox shadow">
+  <ul class="mainTitle">
+    <li>
+      <div>Format</div>
+      <div><%= Respone.Media.format || '?' %></div>
+    </li>
+    <li>
+      <div>Source</div>
+      <div><%= capitalise(Respone.Media.source) || '?' %></div>
+    </li>
+    <% if (Type != "Manga") { %>
+      <li>
+        <div>Episodes</div>
+        <div><%= Respone.Media.episodes || '?' %></div>
+      </li>
+      <li>
+        <div>Run time</div>
+        <div><%= Respone.Media.duration ? Respone.Media.duration + 'm' : '?' %></div>
+      </li>
+    <% } %>
+  </ul>
+  <p><%= cleanDesc(Respone.Media.description, 500) || 'No synopsis has been added to this title.'  %></p>
+  <span>Studios</span>
+  <ul class="mainTags">
+      <%(Respone.Media.studios.edges).forEach(edge => { %>
+          <% if (edge.isMain === true) { %>
+              <li><%= edge.node.name %></li>
+              <%}%>
+          <%});%>
+  </ul>
+  <span>Genres</span>
+  <ul class="mainTags">
+      <% for (let j = 0; j < Math.min(((Respone.Media.genres).length), 3); j++) { %>
+          <li><%= Respone.Media.genres[j] %></li>
+      <% } %>
+  </ul>
+</div>
+<% if ((Respone.Media.relations.edges).length != 0) { %>
+  <!-- Relations -->
+  <div class="mainTextBox shadow">
+    <span>Relations</span>
+    <div class="relations">
+        <% Respone.Media.relations.edges.forEach((edge) => { %>
+          <div class="box">
+            <div>
+            <a href="/<%= edge.node.type %>/<%= edge.node.id %>/<%= encodeURI(edge.node.title[Lang]) %>" class="cover">
+              <img src=<%= edge.node.coverImage.large %> alt="" class="image loaded" />
+            </a>
+            </div>
+            <a href="/Desc/<%= edge.node.id %>/<%= encodeURI(edge.node.title[Lang]) %>" class="title"><%= edge.node.title[Lang] %></a>
+          </div>
+        <% }) %>
+    </div>
+  </div>
+<% } %>
+<!-- Recommedations -->
+
+<% if ((Respone.Media.recommendations.nodes).length != 0) { %>
+  <div class="mainTextBox shadow">
+    <span>Recommendations</span>
+    <div class="relations">
+      <% Respone.Media.recommendations.nodes.forEach((recommendation) => { %>
+        <div class="box">
+          <div>
+            <% console.log(recommendation.mediaRecommendation.type) %>
+            <a href="/<%= recommendation.mediaRecommendation.type %>/<%= recommendation.mediaRecommendation.id %>/<%= encodeURI(recommendation.mediaRecommendation.title.romaji) %>" class="cover">
+              <img src="<%= recommendation.mediaRecommendation.coverImage.large %>" alt="" class="image loaded" />
+            </a>
+          </div>
+          <a href="/Desc/<%= recommendation.mediaRecommendation.id %>/<%= encodeURI(recommendation.mediaRecommendation.title.romaji) %>" class="title"><%= recommendation.mediaRecommendation.title.romaji %></a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+<% } %>

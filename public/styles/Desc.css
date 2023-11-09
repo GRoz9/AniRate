@@ -1,0 +1,412 @@
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, 
+    rgba(0, 0, 0, 0.07) 0px 2px 2px, 
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, 
+    rgba(0, 0, 0, 0.07) 0px 8px 8px, 
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+nav {
+    background-color: rgba(31, 40, 71, 0.5);
+    transition: all 0.3s ease-in;
+}
+
+nav:hover {
+    background-color: #1f2847;
+    opacity: 100%;
+}
+
+.container {
+    /* padding: 1rem; */
+    margin-top: -5rem;
+    display: flex;
+    color: #278986;
+}
+
+/* .banner {
+} */
+
+.bannerImg {
+    width: 100%;
+    margin-top: -7.5rem;
+}
+
+.sidePanel {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    width: 20%;
+}
+
+.sidePanel img{
+    width: auto;
+    height: auto;
+}
+
+.sideInfo {
+    font-weight: 500;
+}
+
+/* SidePanelRaiting Start */
+
+.aniRating li {
+    background-color: #fff;
+    text-transform: capitalize;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.aniRating li p {
+    margin: 0;
+}
+
+.aniRating li p i {
+    margin-right: 0.5rem;
+}
+/* SidePanelRaiting End */
+
+/* SidePanelInfo Start */
+
+.SidePanelInfo{
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.SidePanelInfo li {
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.SidePanelInfo span {
+    cursor: pointer;
+    border-radius: 15px;
+    border: 0.125rem solid #a4bbb9;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    margin: 1rem;
+    justify-content: space-around;
+    transition: all 0.3s;
+}
+
+.SidePanelInfo span:hover {
+    background-color: #a4bbb9;
+}
+
+.sideTitle {
+    font-weight: 700;
+}
+
+.titleInfo {
+    font-weight: 500;
+    color: #45807f;
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+/* SidePanelInfo End */
+
+.mobile {
+    display: none;
+}
+
+.mobileRaiting {
+    display: none;
+}
+
+.mainInfo {
+    margin: 1rem 2rem;
+    margin-top: 5rem;
+    width: 65%;
+}
+
+.mainInfoContainment {
+    display: flex;
+}
+
+.mainTitleInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainInfoContainment div span {
+    margin-bottom: 1rem;
+}
+
+#countdownTimer {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #a4bbb9;
+    margin-bottom: 1rem;
+}
+
+.mainInfo span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.catagorieList {
+    margin: 2rem 0;
+}
+
+.catagorieList ul {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.optionClickable {
+    cursor: pointer
+}
+
+.catagorieList ul li {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-bottom: 0.125rem solid #a4bbb9;
+}
+
+.catagorieList ul li.optionListActive {
+    border-bottom: 0.125rem solid #278986;; /* Different border color for the li with class optionListActive */
+}
+
+.emptyBorder {
+    width: 100%;
+    border-bottom: 0.125rem solid #a4bbb9;
+}
+
+.mainTextBox {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem 1rem 0rem 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.mainTitle {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mainTitle li div:nth-child(1) {
+    color: #45807f;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.mainTitle li div:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.mainTextBox p {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.mainTextBox span {
+    font-size: 1rem;
+}
+
+.mainTags {
+    display: flex;
+    margin: 0;
+}
+
+.mainTags li {
+    border-radius: 17.5px;
+    background-color: #a4bbb9;
+    background-color: #278986;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    margin: 1rem 0.25rem;
+}
+
+.streams {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.streams li a{
+    color: #278986;
+}
+
+.streams a:hover {
+    color: #fff;
+}
+
+.streams li{
+    background-color: #fff;
+    margin: 0.25rem;
+    border-radius: 10px;
+    padding: 1rem 0.5rem;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.streams span {
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    color: #7b8d8b;
+    font-weight: 700;
+}
+
+.icon{
+    border-radius: 15px;
+    height: 3rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    width: 3rem;
+    vertical-align: middle;
+    line-height: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgb(12,101,166);
+    color:  #fff;
+}
+#streamInfo {
+    font-size: 1rem;
+    color: #7b8d8b;
+    font-style: italic;
+    margin-top: 1rem;
+    width: 100%;
+    border-bottom: 0.125rem solid #a4bbb9;
+}
+
+iframe {
+    border-radius: 5px;
+}
+
+/* .relations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    justify-items: center;
+} */
+
+.relations {
+    align-items: baseline;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.box {
+    background-color: #e9eeee;
+    display: flex;
+    width: min-content;
+    margin: 1rem;
+}
+
+.cover {
+    width: fit-content;
+    height: auto;
+}
+
+.cover img {
+    height: 10rem;
+    width: 8rem;
+    margin-right: 0;
+}
+
+.title {
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        background-color: #1f2847;
+        opacity: 100%;
+        transition: none;
+    }    
+  }
+
+@media screen and (max-width: 768px) {
+/* Tablet */
+    .bannerImg {
+        margin: 0;
+    }
+
+    .catagorieList {
+        display: flex;
+        justify-content: center;
+    }
+
+    .catagorieList ul li {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .emptyBorder {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+/* Smartphones */
+
+    /* Desc */
+
+    .container {
+        padding: 0;
+        margin-top: 0rem;
+        justify-content: center
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .mobileRaiting p{
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+    }
+    
+    .mobileRaiting i{
+        margin-right: 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .mobileRaiting p{
+        margin: 0;
+    }
+
+    .mainInfo {
+    margin: 1rem;
+    width: -webkit-fill-available;
+    }
+
+    .mainInfo span {
+        font-size: 1.2rem;
+    }
+    
+    .image {
+        height: 12rem;
+        width: auto;
+        margin-right: 1rem;
+    }
+
+    .catagorieList {
+        overflow-x: scroll!important;
+    }
+
+    iframe {
+        border-radius: 5px;
+        height: auto;
+    }
+
+    .sidePanel {
+    display: none;
+    }
+    /* Desc */
+
+}

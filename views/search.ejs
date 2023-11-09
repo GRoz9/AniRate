@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AniRates</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <!-- CSS StyleSheet -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous"
+        />
+    
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/Filter.css">
+        <link rel="stylesheet" href="styles/Reactive.css" />
+        <link rel="stylesheet" href="styles/footer.css">
+    
+    
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/e8070127b0.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- BootsStrap Js-->
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"
+        ></script>
+      </head>
+<body>
+
+    <!-- Nav Bar -->
+    <%- include("partials/header.ejs") %>
+    <!-- Nav Bar -->
+
+    <section>
+
+        <%- include("partials/filter.ejs") %>
+
+        <div class="container">
+
+            <% if (Respone.Page.pageInfo.total === 0) { %>
+                <p class="NoResults">No Results</p>
+            <% } else { %>
+
+            <section class="Catagories">
+                
+                    <% for (let i = 0, len = Respone.Page.pageInfo.total; i < len; i++) { %>
+                        <div class="box">
+                            <a href="/<%= Respone.Page.media[i].type %>/<%= Respone.Page.media[i].id %>/<%= encodeURI(Respone.Page.media[i].title[Lang]) %>" class="cover">
+                                <img src=<%= Respone.Page.media[i].coverImage.extraLarge %> alt="" class="image loaded" />
+                                <div class="overview">
+                                <div class="overviewAvg">Average Score: <%= Respone.Page.media[i].averageScore %>%</div>
+                                <div class="overviewDescription"><%= cleanDesc(Respone.Page.media[i].description, 118) %> </div>
+                                <div class="ExtraInfo">
+                                    <p>Start Date: <%= cleanDate(Respone.Page.media[i].startDate.month, Respone.Page.media[i].startDate.day, Respone.Page.media[i].startDate.year) %></p>
+                                    <p>Status: <%= capitalise(Respone.Page.media[i].status) %> </p>
+                                    <p>Season: <%= capitalise(Respone.Page.media[i].season + " " + Respone.Page.media[i].seasonYear) %></p>
+                                </div>
+                                <div class="Info">
+                                    <span><%= Respone.Page.media[i].format %> Show</span>
+                                    <span class="Seperator">•</span>
+                                    <span><%= Respone.Page.media[i].episodes %> Episodes</span>
+                                </div>
+                                <div class="Tags">
+                                    <div class="TagBox"><%= Respone.Page.media[i].genres[0] %></div>
+                                    <div class="TagBox"><%= Respone.Page.media[i].genres[1] %></div>
+                                    <div class="TagBox"><%= Respone.Page.media[0].genres[2] %></div>
+                                </div>
+                                </div>
+                            </a>
+                            <a href="/<%= Respone.Page.media[i].type %>/<%= Respone.Page.media[i].id %>/<%= encodeURI(Respone.Page.media[i].title[Lang]) %>" class="title"><%= Respone.Page.media[i].title[Lang] %></a>
+                            </div>
+                    <% } %>
+                <% } %>
+            </section>
+        </div>
+    </section>
+
+    <%- include("partials/footer.ejs") %>
+
+</body>
+</html>
