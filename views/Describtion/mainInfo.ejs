@@ -47,7 +47,7 @@
               <img src=<%= edge.node.coverImage.large %> alt="" class="image loaded" />
             </a>
             </div>
-            <a href="/Desc/<%= edge.node.id %>/<%= encodeURI(edge.node.title[Lang]) %>" class="title"><%= edge.node.title[Lang] %></a>
+            <a href="/<%= edge.node.type %>/<%= edge.node.id %>/<%= encodeURI(edge.node.title[Lang]) %>" class="title"><%= edge.node.title[Lang] %></a>
           </div>
         <% }) %>
     </div>
@@ -62,12 +62,11 @@
       <% Respone.Media.recommendations.nodes.forEach((recommendation) => { %>
         <div class="box">
           <div>
-            <% console.log(recommendation.mediaRecommendation.type) %>
             <a href="/<%= recommendation.mediaRecommendation.type %>/<%= recommendation.mediaRecommendation.id %>/<%= encodeURI(recommendation.mediaRecommendation.title.romaji) %>" class="cover">
               <img src="<%= recommendation.mediaRecommendation.coverImage.large %>" alt="" class="image loaded" />
             </a>
           </div>
-          <a href="/Desc/<%= recommendation.mediaRecommendation.id %>/<%= encodeURI(recommendation.mediaRecommendation.title.romaji) %>" class="title"><%= recommendation.mediaRecommendation.title.romaji %></a>
+          <a href="/<%= recommendation.mediaRecommendation.type %>/<%= recommendation.mediaRecommendation.id %>/<%= encodeURI(recommendation.mediaRecommendation.title.romaji) %>" class="title"><%= recommendation.mediaRecommendation.title.romaji %></a>
         </div>
       <% }) %>
     </div>

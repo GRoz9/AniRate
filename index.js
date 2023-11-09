@@ -1,5 +1,4 @@
 import express, { response }  from "express";
-import axios from "axios";
 import bodyParser from "body-parser";
 import {HomePage, UserSearch, idDesc, Trending, PopThisSeason, Upcoming, AllTimePop, PopManwha} from "./API/apiRequests.js"
 import {cleanDesc, cleanDate, capitalise} from "./public/js/scripts.js"
@@ -7,7 +6,7 @@ import {getAnimeSeason} from "./API/scripts.js"
 
 const API_URL = "https://graphql.anilist.co"
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 var UserPref = "romaji"
 var search = ""
 var MediaType = "Anime"
@@ -205,7 +204,7 @@ app.get("/:type/PopularManhwa", async (req, res) => {
       'Accept': 'application/json',
     },
     body: JSON.stringify({
-      query: AllTimePop,
+      query: PopManwha,
       variables: {
         "page": 1,
         "type": Type,
