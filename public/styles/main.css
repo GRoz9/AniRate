@@ -102,7 +102,7 @@ input::placeholder {
 }
 
 .Catagories {
-  align-items: start;
+  align-items: stretch;
   display: grid;
   grid-gap: 28px 30px;
   grid-template-columns: repeat(auto-fill,185px);
@@ -246,4 +246,8 @@ input::placeholder {
     font-weight: 700;
     line-height: 21px;
     margin: 0.625em 0.3125rem ;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
