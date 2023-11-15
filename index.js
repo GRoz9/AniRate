@@ -15,6 +15,7 @@ var CatagoryDesc = "Info"
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser());
 
 function handleResponse(response) {
   return response.json().then(function (json) {
@@ -33,6 +34,9 @@ function handleError(error) {
 app.get("/", async (req, res) => {
   const currentSeason = getAnimeSeason();
   const nextSeason = getAnimeSeason(true);
+  const userPref = req.cookies.userPref || "romaji";
+  const mediaType = req.cookies.mediaType || "Anime";
+  const catagoryDesc = req.cookies.catagoryDesc || "Info";
   var respone = await fetch(API_URL, {
     method: "POST",
     headers: {
@@ -50,6 +54,12 @@ app.get("/", async (req, res) => {
       }
     })
   } ).then(handleResponse).then(handleData).catch(handleError);
+
+  // Save user preferences to cookies
+  res.cookie('userPref', userPref);
+  res.cookie('mediaType', mediaType);
+  res.cookie('catagoryDesc', catagoryDesc);
+
   res.render("Main.ejs", {
     Respone: respone,
     cleanDesc: cleanDesc,
