@@ -105,7 +105,9 @@
                     </div>
                 </div>
                 </a>
-                <a href="/<%= Respone.manhwa.media[i].type %>/<%= Respone.manhwa.media[i].id %>/<%= encodeURI(Respone.manhwa.media[i].title[Lang]) %>" class="title"><%= Respone.manhwa.media[i].title[Lang] %></a>
+                <a href="/<%= Respone.manhwa.media[i].type %>/<%= Respone.manhwa.media[i].id %>/<%= encodeURI(Respone.manhwa.media[i].title[Lang]) %>" class="title">
+                    <%= Respone.manhwa.media[i].title[Lang] %>
+                </a>
             </div>
         <% } %>
         </section>

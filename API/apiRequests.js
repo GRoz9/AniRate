@@ -955,7 +955,6 @@ query (
   }
 }
 `
-
 export var PopManwha = `
 query (
   $page: Int = 1
@@ -1033,6 +1032,9 @@ query (
       id
       title {
         userPreferred
+        romaji
+        english
+        native
       }
       coverImage {
         extraLarge

@@ -45,9 +45,9 @@
 
     <section>
       <div class="banner">
-        <img class="bannerImg" src="<%= Respone.Media.bannerImage %>" alt="">
+          <img class="bannerImg" src="<%= Respone.Media.bannerImage %>" alt="">
       </div>
-      <div class="container">
+      <div class="container" style="<%= Respone?.Media?.bannerImage !== null ? 'margin-top: -5rem;' : '' %>">
         <div class="sidePanel">
           <img src=<%= Respone.Media.coverImage.extraLarge %> alt="" class="image loaded shadow" />
           <ul class="aniRating sideInfo"> 
